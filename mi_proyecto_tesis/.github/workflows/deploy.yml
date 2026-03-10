@@ -1,0 +1,17 @@
+name: Subir a TIRA
+on: [push]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Login a TIRA
+        run: echo "${{ secrets.TIRA_TOKEN }}" | docker login registry.tira.io -u Doffy143 --password-stdin
+
+      - name: Build y Push
+        run: |
+          docker build -t registry.tira.io/Doffy143/tesis-estilistica:latest .
+          docker push registry.tira.io/Doffy143/tesis-estilistica:latest
