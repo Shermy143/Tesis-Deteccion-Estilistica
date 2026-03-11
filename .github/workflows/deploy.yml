@@ -13,5 +13,5 @@ jobs:
 
       - name: Build y Push
         run: |
-          docker build -t registry.tira.io/doffy143/tesis-estilistica:latest .
-          docker push registry.tira.io/doffy143/tesis-estilistica:latest
+          docker build -t registry.tira.io/Doffy143/tesis-estilistica:latest .
+          docker push registry.tira.io/Doffy143/tesis-estilistica:latest
