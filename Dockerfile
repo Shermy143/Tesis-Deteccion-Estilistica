@@ -14,4 +14,5 @@ COPY ./models ./models
 
 #ENTRYPOINT ["python", "run.py"]
 
-ENTRYPOINT [ "python3", "/script.py", "-i", "$inputDataset", "-o", "$outputDir" ]
+#ENTRYPOINT [ "python3", "/script.py", "-i", "$inputDataset", "-o", "$outputDir" ]
+ENTRYPOINT [ "python3", "/app/script.py", "-i", "$inputDataset", "-o", "$outputDir" ]
