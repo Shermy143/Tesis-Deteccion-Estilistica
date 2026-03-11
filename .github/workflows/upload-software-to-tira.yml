@@ -29,5 +29,4 @@ jobs:
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
           tira-cli verify-installation
-          tira-cli code-submission --path ${{ inputs.directory }} --task generative-ai-authorship-verification-panclef-2026 --dataset generative-ai-authorship-verification-panclef-2026/pan26-generative-ai-authorship-verification-dev
-
+          tira-cli code-submission --path ${{ inputs.directory }} \ --task generative-ai-authorship-verification-panclef-2026 \ --dataset generative-ai-authorship-verification-panclef-2026/spot-check-dataset-20260227-training
