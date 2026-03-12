@@ -28,5 +28,5 @@ jobs:
       - name: Build, test, and upload image
         run: |
           tira-cli login --token ${{ secrets.TIRA_CLIENT_TOKEN }}
-          tira-cli verify-installation
-          tira-cli code-submission --path ${{ inputs.directory }} --task generative-ai-authorship-verification-panclef-2025 --dataset pan25-generative-ai-detection-smoke-test-20250428-training
+          docker build -t registry.webis.de/code-research/tira/tira-user-codingmates/tesis-deteccion:latest .
+          docker push registry.webis.de/code-research/tira/tira-user-codingmates/tesis-deteccion:latest
